@@ -1,0 +1,30 @@
+<h1 class="welcome"> Bienvenu sur le site de e-commerce </h1>
+
+<p class="welcome-desc">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro doloribus voluptas nemo dolore architecto quisquam? Eos aperiam fugiat, deserunt iste enim repudiandae consequatur eveniet, tempore quod autem pariatur eum voluptates. Sit cum a ut aliquid iure explicabo deserunt quaerat reiciendis tenetur, repellendus ad debitis mollitia consequatur dolorem, voluptates saepe.
+</p>
+
+<h2>Les produits promus</h2>
+
+<div class="article">
+<?php foreach($promut as $promute): ?>
+
+    <article class="article-card">
+        <h3><?= $promute->getName() ?></h3>
+        <p class="desc">
+            <?= $promute->getDescription() ?>
+        </p>
+        
+        <p class="price"> 
+            <?= $promute->getPrice() ?>$
+        </p>
+        
+        <img src=" <?= $promute->getImg()  ?> "></img>
+        
+        
+        <a href="index.php?page=product&id=<?= $promute->getId() ?>" class="produit-unique">Voir plus !</a>
+    </article>
+    
+<?php endforeach; ?>
+
+</div>
