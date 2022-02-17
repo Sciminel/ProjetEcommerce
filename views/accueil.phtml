@@ -10,6 +10,7 @@
 <?php foreach($promut as $promute): ?>
 
     <article class="article-card">
+    <img src=" <?= $promute->getImg()  ?> "></img>
         <h3><?= $promute->getName() ?></h3>
         <p class="desc">
             <?= $promute->getDescription() ?>
@@ -19,7 +20,7 @@
             <?= $promute->getPrice() ?>$
         </p>
         
-        <img src=" <?= $promute->getImg()  ?> "></img>
+
         
         
         <a href="index.php?page=product&id=<?= $promute->getId() ?>" class="produit-unique">Voir plus !</a>

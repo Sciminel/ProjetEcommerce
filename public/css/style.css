@@ -6,6 +6,7 @@
 
 body{
     background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -26,7 +27,14 @@ nav ul li a{
     line-height: 70px;
     text-decoration: none;
     color: #333;
+    transition: all .1s ease-in-out;
     
+}
+nav ul li a:hover{
+    line-height: 70px;
+    text-decoration: underline;
+    color: #333;
+    font-size: 1.5rem;
 }
 
 main .welcome{
@@ -45,6 +53,13 @@ main h2{
     padding: 20px 0;
     font-size: 1.7rem;
 }
+main .return-home{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    text-decoration: none;
+}
 
 .article{
     width: 100%;
@@ -54,13 +69,19 @@ main h2{
 }
 
 .article-card{
-    width: 30%;
+    width: 40%;
     max-width: 400px;
     min-width: 300px;
     height: auto;
     margin: 20px;
     box-shadow: 0px 0px 5px #333;
     background: #fff;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.article-card:hover{
+    box-shadow: 0 0 50px #333;
+
 }
 
 .article-card h3{
@@ -72,6 +93,7 @@ main h2{
     text-align: center;
     padding: 20px 0;
     font-size: 1.2rem;
+    margin-top: 20px;
 }
 .article-card .price{
     text-align: center;
@@ -101,4 +123,12 @@ main h2{
     background: #333;
     color: #fff;
     
+}
+
+main .return-home{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    text-decoration: none;
 }

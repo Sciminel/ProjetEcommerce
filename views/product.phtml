@@ -1,19 +1,19 @@
-<h2>Le produit</h2>
+<h2><?= $selectOne->getName() ?></h2>
 
-<a href="index.php?page=accueil">Revenir</a>
+<a href="index.php?page=products" class="return-home" >Revoir nos produits</a>
 
 <div class="article">
 
     <article class="article-card">
-        <h2><?= $selectOne->getName() ?></h2>
-        <p>
+    <img src=" <?= $selectOne->getImg()  ?> "></img>
+        <p class="desc">
             <?= $selectOne->getDescription() ?>
         </p>
         
-        <p> 
+        <p class="price"> 
             <?= $selectOne->getPrice() ?>$
         </p>
-        <img src=" <?= $selectOne->getImg()  ?> "></img>
+        
         
     </article>
     

@@ -15,8 +15,8 @@ class ProductManager
         $query = $pdo->prepare("SELECT * FROM products WHERE id = ? ");
         $query->execute(array($_GET['id']));
         
-        $result = $query->setFetchMode(\PDO::FETCH_CLASS, 'Models\Products');
-        
+        $query->setFetchMode(\PDO::FETCH_CLASS, 'Models\Products');
+        $result = $query->fetch();
         return $result;
     }
     
@@ -27,7 +27,7 @@ class ProductManager
         $db = new Database();
         $pdo = $db->db_connect();
         
-        $query = $pdo->prepare("SELECT * FROM products WHERE promute = 0 LIMIT 3");
+        $query = $pdo->prepare("SELECT * FROM products WHERE promute = 1 LIMIT 3");
 
         
         $query->execute();

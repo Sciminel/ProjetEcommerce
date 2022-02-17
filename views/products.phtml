@@ -4,15 +4,16 @@
 <?php foreach($selections as $select): ?>
 
     <article class="article-card">
+    <img src=" <?= $select->getImg();  ?> "></img>
         <h2><?= $select->getName(); ?></h2>
-        <p>
+        <p class="desc">
             <?= $select->getDescription(); ?>
         </p>
         
-        <p> 
+        <p class="price"> 
             <?= $select->getPrice(); ?>$
         </p>
-        <img src=" <?= $select->getImg();  ?> "></img>
+
         
         
         <a href="index.php?page=product&id=<?= $select->getId();  ?>" class="produit-unique">Voir plus !</a>
